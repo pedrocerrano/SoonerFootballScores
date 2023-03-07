@@ -22,7 +22,7 @@
 		29CD821329B7D649006BEFA0 /* GamesListDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821229B7D649006BEFA0 /* GamesListDataService.swift */; };
 		29CD821529B7E94E006BEFA0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821429B7E94E006BEFA0 /* Team.swift */; };
 		29CD821829B7EBDB006BEFA0 /* TeamsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821729B7EBDB006BEFA0 /* TeamsListViewModel.swift */; };
-		29CD821A29B7EC50006BEFA0 /* TeamsListDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821929B7EC50006BEFA0 /* TeamsListDataService.swift */; };
+		29CD821A29B7EC50006BEFA0 /* TeamsInfoDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821929B7EC50006BEFA0 /* TeamsInfoDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		29CD821229B7D649006BEFA0 /* GamesListDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListDataService.swift; sourceTree = "<group>"; };
 		29CD821429B7E94E006BEFA0 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		29CD821729B7EBDB006BEFA0 /* TeamsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewModel.swift; sourceTree = "<group>"; };
-		29CD821929B7EC50006BEFA0 /* TeamsListDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListDataService.swift; sourceTree = "<group>"; };
+		29CD821929B7EC50006BEFA0 /* TeamsInfoDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsInfoDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 		297C814529B7A0E90006AF98 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				29CD821629B7EBC0006BEFA0 /* Teams List */,
+				29CD821629B7EBC0006BEFA0 /* Teams Info */,
 				297C814729B7A58C0006AF98 /* Games List */,
 			);
 			path = UI;
@@ -160,13 +160,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		29CD821629B7EBC0006BEFA0 /* Teams List */ = {
+		29CD821629B7EBC0006BEFA0 /* Teams Info */ = {
 			isa = PBXGroup;
 			children = (
-				29CD821929B7EC50006BEFA0 /* TeamsListDataService.swift */,
+				29CD821929B7EC50006BEFA0 /* TeamsInfoDataService.swift */,
 				29CD821729B7EBDB006BEFA0 /* TeamsListViewModel.swift */,
 			);
-			path = "Teams List";
+			path = "Teams Info";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +243,7 @@
 				297C813029B79F6D0006AF98 /* AppDelegate.swift in Sources */,
 				29CD821829B7EBDB006BEFA0 /* TeamsListViewModel.swift in Sources */,
 				297C815429B7AD610006AF98 /* NetworkError.swift in Sources */,
-				29CD821A29B7EC50006BEFA0 /* TeamsListDataService.swift in Sources */,
+				29CD821A29B7EC50006BEFA0 /* TeamsInfoDataService.swift in Sources */,
 				297C814F29B7A9700006AF98 /* Games.swift in Sources */,
 				297C814929B7A5BF0006AF98 /* GamesListVC.swift in Sources */,
 				29CD821329B7D649006BEFA0 /* GamesListDataService.swift in Sources */,

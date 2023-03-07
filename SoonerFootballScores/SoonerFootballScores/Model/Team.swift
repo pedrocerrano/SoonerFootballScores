@@ -1,5 +1,5 @@
 //
-//  TeamsListDictionary.swift
+//  TeamsInfoDictionary.swift
 //  SoonerFootballScores
 //
 //  Created by iMac Pro on 3/7/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TeamsListDictionary: Decodable {
+struct TeamsInfoDictionary: Decodable {
     private enum CodingKeys: String, CodingKey {
         case teamID             = "id"
         case schoolName         = "school"

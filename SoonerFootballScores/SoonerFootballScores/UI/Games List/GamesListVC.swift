@@ -17,12 +17,12 @@ class GamesListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         seasonGameListTableView.dataSource = self
-        viewModel = GamesListViewModel(delegate: self)
+        gamesViewModel = GamesListViewModel(delegate: self)
     }
     
     
     //MARK: - PROPERTIES
-    var viewModel: GamesListViewModel!
+    var gamesViewModel: GamesListViewModel!
 
 
     // MARK: - Navigation
@@ -35,7 +35,7 @@ class GamesListVC: UIViewController {
 //MARK: - EXT: TableView DataSource
 extension GamesListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.games.count
+        return gamesViewModel.games.count
     }
     
     
@@ -43,7 +43,7 @@ extension GamesListVC: UITableViewDataSource {
         guard let cell = seasonGameListTableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         
-        let game = viewModel.games[indexPath.row]
+        let game = gamesViewModel.games[indexPath.row]
         cell.configureUI(forGame: game)
 
         
@@ -52,7 +52,7 @@ extension GamesListVC: UITableViewDataSource {
 } //: EXT DataSource
 
 
-//MARK: - EXT: DELEGATE
+//MARK: - EXT: Games List Delegate
 extension GamesListVC: GamesListViewDelegate {
     func gamesLoadedSuccessfully() {
         DispatchQueue.main.async {
@@ -68,4 +68,6 @@ extension GamesListVC: GamesListViewDelegate {
             self.present(alertController, animated: true)
         }
     }
-} //: EXT Delegate
+} //: EXT Games List Delegate
+
+
