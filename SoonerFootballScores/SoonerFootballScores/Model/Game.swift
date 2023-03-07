@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TopLevelDictionary: Decodable {
+struct SeasonGamesTopLevelDictionary: Decodable {
     let games: [Game]
 }
 

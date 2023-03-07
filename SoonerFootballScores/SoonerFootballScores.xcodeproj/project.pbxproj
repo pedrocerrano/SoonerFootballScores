@@ -16,6 +16,8 @@
 		297C814C29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C814B29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift */; };
 		297C814F29B7A9700006AF98 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C814E29B7A9700006AF98 /* Game.swift */; };
 		297C815129B7AC430006AF98 /* SeasonGamesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C815029B7AC430006AF98 /* SeasonGamesListViewModel.swift */; };
+		297C815429B7AD610006AF98 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C815329B7AD610006AF98 /* NetworkError.swift */; };
+		297C815729B7ADB30006AF98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C815629B7ADB30006AF98 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		297C814B29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGameTableViewCell.swift; sourceTree = "<group>"; };
 		297C814E29B7A9700006AF98 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		297C815029B7AC430006AF98 /* SeasonGamesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGamesListViewModel.swift; sourceTree = "<group>"; };
+		297C815329B7AD610006AF98 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		297C815629B7ADB30006AF98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		297C812E29B79F6D0006AF98 /* SoonerFootballScores */ = {
 			isa = PBXGroup;
 			children = (
+				297C815529B7ADA60006AF98 /* Helpers */,
+				297C815229B7AD530006AF98 /* Services */,
 				297C814D29B7A9600006AF98 /* Model */,
 				297C814529B7A0E90006AF98 /* UI */,
 				297C814429B7A0BE0006AF98 /* Storyboards */,
@@ -122,6 +128,22 @@
 				297C814E29B7A9700006AF98 /* Game.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		297C815229B7AD530006AF98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				297C815329B7AD610006AF98 /* NetworkError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		297C815529B7ADA60006AF98 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				297C815629B7ADB30006AF98 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,11 +218,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				297C813029B79F6D0006AF98 /* AppDelegate.swift in Sources */,
+				297C815429B7AD610006AF98 /* NetworkError.swift in Sources */,
 				297C814F29B7A9700006AF98 /* Game.swift in Sources */,
 				297C814929B7A5BF0006AF98 /* SeasonGamesListVC.swift in Sources */,
 				297C815129B7AC430006AF98 /* SeasonGamesListViewModel.swift in Sources */,
 				297C814C29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift in Sources */,
 				297C813229B79F6D0006AF98 /* SceneDelegate.swift in Sources */,
+				297C815729B7ADB30006AF98 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
