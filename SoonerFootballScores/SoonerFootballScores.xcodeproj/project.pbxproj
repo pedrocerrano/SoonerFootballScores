@@ -56,15 +56,39 @@
 		297C812E29B79F6D0006AF98 /* SoonerFootballScores */ = {
 			isa = PBXGroup;
 			children = (
-				297C812F29B79F6D0006AF98 /* AppDelegate.swift */,
-				297C813129B79F6D0006AF98 /* SceneDelegate.swift */,
-				297C813329B79F6D0006AF98 /* ViewController.swift */,
-				297C813529B79F6D0006AF98 /* Main.storyboard */,
-				297C813829B79F6E0006AF98 /* Assets.xcassets */,
-				297C813A29B79F6E0006AF98 /* LaunchScreen.storyboard */,
-				297C813D29B79F6E0006AF98 /* Info.plist */,
+				297C814529B7A0E90006AF98 /* UI */,
+				297C814429B7A0BE0006AF98 /* Storyboards */,
+				297C814329B7A09C0006AF98 /* Supporting Files */,
 			);
 			path = SoonerFootballScores;
+			sourceTree = "<group>";
+		};
+		297C814329B7A09C0006AF98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				297C812F29B79F6D0006AF98 /* AppDelegate.swift */,
+				297C813129B79F6D0006AF98 /* SceneDelegate.swift */,
+				297C813829B79F6E0006AF98 /* Assets.xcassets */,
+				297C813D29B79F6E0006AF98 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		297C814429B7A0BE0006AF98 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				297C813529B79F6D0006AF98 /* Main.storyboard */,
+				297C813A29B79F6E0006AF98 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		297C814529B7A0E90006AF98 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				297C813329B79F6D0006AF98 /* ViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W6HRJ6R6XG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SoonerFootballScores/Info.plist;
+				INFOPLIST_FILE = "SoonerFootballScores/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W6HRJ6R6XG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SoonerFootballScores/Info.plist;
+				INFOPLIST_FILE = "SoonerFootballScores/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
