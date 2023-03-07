@@ -15,6 +15,7 @@
 		297C814929B7A5BF0006AF98 /* SeasonGamesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C814829B7A5BF0006AF98 /* SeasonGamesListVC.swift */; };
 		297C814C29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C814B29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift */; };
 		297C814F29B7A9700006AF98 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C814E29B7A9700006AF98 /* Game.swift */; };
+		297C815129B7AC430006AF98 /* SeasonGamesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C815029B7AC430006AF98 /* SeasonGamesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		297C814829B7A5BF0006AF98 /* SeasonGamesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGamesListVC.swift; sourceTree = "<group>"; };
 		297C814B29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGameTableViewCell.swift; sourceTree = "<group>"; };
 		297C814E29B7A9700006AF98 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		297C815029B7AC430006AF98 /* SeasonGamesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGamesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		297C814729B7A58C0006AF98 /* Season Games List */ = {
 			isa = PBXGroup;
 			children = (
+				297C815029B7AC430006AF98 /* SeasonGamesListViewModel.swift */,
 				297C814829B7A5BF0006AF98 /* SeasonGamesListVC.swift */,
 				297C814A29B7A77F0006AF98 /* Custom Views */,
 			);
@@ -195,6 +198,7 @@
 				297C813029B79F6D0006AF98 /* AppDelegate.swift in Sources */,
 				297C814F29B7A9700006AF98 /* Game.swift in Sources */,
 				297C814929B7A5BF0006AF98 /* SeasonGamesListVC.swift in Sources */,
+				297C815129B7AC430006AF98 /* SeasonGamesListViewModel.swift in Sources */,
 				297C814C29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift in Sources */,
 				297C813229B79F6D0006AF98 /* SceneDelegate.swift in Sources */,
 			);
