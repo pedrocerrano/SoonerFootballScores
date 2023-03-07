@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		297C813029B79F6D0006AF98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C812F29B79F6D0006AF98 /* AppDelegate.swift */; };
 		297C813229B79F6D0006AF98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C813129B79F6D0006AF98 /* SceneDelegate.swift */; };
-		297C813429B79F6D0006AF98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C813329B79F6D0006AF98 /* ViewController.swift */; };
 		297C813729B79F6D0006AF98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297C813529B79F6D0006AF98 /* Main.storyboard */; };
 		297C813929B79F6E0006AF98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297C813829B79F6E0006AF98 /* Assets.xcassets */; };
 		297C813C29B79F6E0006AF98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297C813A29B79F6E0006AF98 /* LaunchScreen.storyboard */; };
+		297C814929B7A5BF0006AF98 /* SeasonGamesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C814829B7A5BF0006AF98 /* SeasonGamesListVC.swift */; };
+		297C814C29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C814B29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift */; };
+		297C814F29B7A9700006AF98 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C814E29B7A9700006AF98 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		297C812C29B79F6D0006AF98 /* SoonerFootballScores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoonerFootballScores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297C812F29B79F6D0006AF98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		297C813129B79F6D0006AF98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		297C813329B79F6D0006AF98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		297C813629B79F6D0006AF98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		297C813829B79F6E0006AF98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		297C813B29B79F6E0006AF98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		297C813D29B79F6E0006AF98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		297C814829B7A5BF0006AF98 /* SeasonGamesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGamesListVC.swift; sourceTree = "<group>"; };
+		297C814B29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGameTableViewCell.swift; sourceTree = "<group>"; };
+		297C814E29B7A9700006AF98 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		297C812E29B79F6D0006AF98 /* SoonerFootballScores */ = {
 			isa = PBXGroup;
 			children = (
+				297C814D29B7A9600006AF98 /* Model */,
 				297C814529B7A0E90006AF98 /* UI */,
 				297C814429B7A0BE0006AF98 /* Storyboards */,
 				297C814329B7A09C0006AF98 /* Supporting Files */,
@@ -86,9 +91,34 @@
 		297C814529B7A0E90006AF98 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				297C813329B79F6D0006AF98 /* ViewController.swift */,
+				297C814729B7A58C0006AF98 /* Season Games List */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		297C814729B7A58C0006AF98 /* Season Games List */ = {
+			isa = PBXGroup;
+			children = (
+				297C814829B7A5BF0006AF98 /* SeasonGamesListVC.swift */,
+				297C814A29B7A77F0006AF98 /* Custom Views */,
+			);
+			path = "Season Games List";
+			sourceTree = "<group>";
+		};
+		297C814A29B7A77F0006AF98 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				297C814B29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		297C814D29B7A9600006AF98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				297C814E29B7A9700006AF98 /* Game.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				297C813429B79F6D0006AF98 /* ViewController.swift in Sources */,
 				297C813029B79F6D0006AF98 /* AppDelegate.swift in Sources */,
+				297C814F29B7A9700006AF98 /* Game.swift in Sources */,
+				297C814929B7A5BF0006AF98 /* SeasonGamesListVC.swift in Sources */,
+				297C814C29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift in Sources */,
 				297C813229B79F6D0006AF98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
