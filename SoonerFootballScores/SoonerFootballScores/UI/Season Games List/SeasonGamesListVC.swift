@@ -17,28 +17,12 @@ class SeasonGamesListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         seasonGameListTableView.dataSource = self
-        fetchSeasonGamesList()
+        viewModel = SeasonGamesListViewModel(delegate: self)
     }
     
     
     //MARK: - PROPERTIES
-    var games: [SeasonGamesTopLevelDictionary] = []
-    
-    
-    //MARK: - FUNCTIONS
-    func fetchSeasonGamesList() {
-        SeasonGamesListViewModel.fetchSeasonGamesList { result in
-            switch result {
-            case .success(let topLevel):
-                self.games = topLevel
-                DispatchQueue.main.async {
-                    self.seasonGameListTableView.reloadData()
-                }
-            case .failure(let error):
-                print(error.errorDescription ?? Constants.Error.unknownError)
-            }
-        }
-    }
+    var viewModel: SeasonGamesListViewModel!
 
 
     // MARK: - Navigation
@@ -51,16 +35,37 @@ class SeasonGamesListVC: UIViewController {
 //MARK: - EXT: TableView DataSource
 extension SeasonGamesListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return games.count
+        return viewModel.games.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = seasonGameListTableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? SeasonGameTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         
-        let game = games[indexPath.row]
-        cell.updateUI(forGame: game)
+        let game = viewModel.games[indexPath.row]
+        cell.configureUI(forGame: game)
+
         
         return cell
     }
-}
+} //: EXT DataSource
+
+
+//MARK: - EXT: DELEGATE
+extension SeasonGamesListVC: SeasonGamesListViewDelegate {
+    func gamesLoadedSuccessfully() {
+        DispatchQueue.main.async {
+            self.seasonGameListTableView.reloadData()
+        }
+    }
+    
+    func encountered(_ error: NetworkError) {
+        let alertController = UIAlertController(title: "Network Error", message: error.errorDescription, preferredStyle: .alert)
+        let closeAction     = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(closeAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true)
+        }
+    }
+} //: EXT Delegate

@@ -18,7 +18,7 @@ class SeasonGameTableViewCell: UITableViewCell {
     
     
     //MARK: - FUNCTIONS
-    func updateUI(forGame game: SeasonGamesTopLevelDictionary) {
+    func configureUI(forGame game: SeasonGamesTopLevelDictionary) {
         awayTeamNameLabel.text = game.awayTeamName
         awayTeamScoreLabel.text = "\(game.awayTeamFinalScore)"
         homeTeamNameLabel.text = game.homeTeamName

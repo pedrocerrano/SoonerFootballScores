@@ -18,6 +18,8 @@
 		297C815129B7AC430006AF98 /* SeasonGamesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C815029B7AC430006AF98 /* SeasonGamesListViewModel.swift */; };
 		297C815429B7AD610006AF98 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C815329B7AD610006AF98 /* NetworkError.swift */; };
 		297C815729B7ADB30006AF98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C815629B7ADB30006AF98 /* Constants.swift */; };
+		29CD821129B7D579006BEFA0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821029B7D579006BEFA0 /* APIService.swift */; };
+		29CD821329B7D649006BEFA0 /* SeasonGamesListDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821229B7D649006BEFA0 /* SeasonGamesListDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		297C815029B7AC430006AF98 /* SeasonGamesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGamesListViewModel.swift; sourceTree = "<group>"; };
 		297C815329B7AD610006AF98 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		297C815629B7ADB30006AF98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		29CD821029B7D579006BEFA0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		29CD821229B7D649006BEFA0 /* SeasonGamesListDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonGamesListDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		297C814729B7A58C0006AF98 /* Season Games List */ = {
 			isa = PBXGroup;
 			children = (
+				29CD821229B7D649006BEFA0 /* SeasonGamesListDataService.swift */,
 				297C815029B7AC430006AF98 /* SeasonGamesListViewModel.swift */,
 				297C814829B7A5BF0006AF98 /* SeasonGamesListVC.swift */,
 				297C814A29B7A77F0006AF98 /* Custom Views */,
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				297C815329B7AD610006AF98 /* NetworkError.swift */,
+				29CD821029B7D579006BEFA0 /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,9 +227,11 @@
 				297C815429B7AD610006AF98 /* NetworkError.swift in Sources */,
 				297C814F29B7A9700006AF98 /* Game.swift in Sources */,
 				297C814929B7A5BF0006AF98 /* SeasonGamesListVC.swift in Sources */,
+				29CD821329B7D649006BEFA0 /* SeasonGamesListDataService.swift in Sources */,
 				297C815129B7AC430006AF98 /* SeasonGamesListViewModel.swift in Sources */,
 				297C814C29B7A7BB0006AF98 /* SeasonGameTableViewCell.swift in Sources */,
 				297C813229B79F6D0006AF98 /* SceneDelegate.swift in Sources */,
+				29CD821129B7D579006BEFA0 /* APIService.swift in Sources */,
 				297C815729B7ADB30006AF98 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
