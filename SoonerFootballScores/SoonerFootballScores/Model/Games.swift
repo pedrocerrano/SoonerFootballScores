@@ -1,5 +1,5 @@
 //
-//  Game.swift
+//  GamesListDictionary.swift
 //  SoonerFootballScores
 //
 //  Created by iMac Pro on 3/7/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SeasonGamesTopLevelDictionary: Decodable {
+struct GamesListDictionary: Decodable {
     private enum CodingKeys: String, CodingKey {
         case gameID             = "id"
         case season

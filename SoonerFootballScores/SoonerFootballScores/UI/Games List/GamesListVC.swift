@@ -1,5 +1,5 @@
 //
-//  SeasonGamesListVC.swift
+//  GamesListVC.swift
 //  SoonerFootballScores
 //
 //  Created by iMac Pro on 3/7/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SeasonGamesListVC: UIViewController {
+class GamesListVC: UIViewController {
 
     //MARK: - OUTLETS
     @IBOutlet weak var seasonGameListTableView: UITableView!
@@ -17,12 +17,12 @@ class SeasonGamesListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         seasonGameListTableView.dataSource = self
-        viewModel = SeasonGamesListViewModel(delegate: self)
+        viewModel = GamesListViewModel(delegate: self)
     }
     
     
     //MARK: - PROPERTIES
-    var viewModel: SeasonGamesListViewModel!
+    var viewModel: GamesListViewModel!
 
 
     // MARK: - Navigation
@@ -33,14 +33,14 @@ class SeasonGamesListVC: UIViewController {
 
 
 //MARK: - EXT: TableView DataSource
-extension SeasonGamesListVC: UITableViewDataSource {
+extension GamesListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.games.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = seasonGameListTableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? SeasonGameTableViewCell else { return UITableViewCell() }
+        guard let cell = seasonGameListTableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         
         let game = viewModel.games[indexPath.row]
@@ -53,7 +53,7 @@ extension SeasonGamesListVC: UITableViewDataSource {
 
 
 //MARK: - EXT: DELEGATE
-extension SeasonGamesListVC: SeasonGamesListViewDelegate {
+extension GamesListVC: GamesListViewDelegate {
     func gamesLoadedSuccessfully() {
         DispatchQueue.main.async {
             self.seasonGameListTableView.reloadData()

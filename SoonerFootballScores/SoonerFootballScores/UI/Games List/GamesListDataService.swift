@@ -1,5 +1,5 @@
 //
-//  SeasonGamesListDataService.swift
+//  GamesListDataService.swift
 //  SoonerFootballScores
 //
 //  Created by iMac Pro on 3/7/23.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct SeasonGamesListDataService {
+struct GamesListDataService {
     
     private let service = APIService()
     
-    func fetchGamesList(completion: @escaping (Result<[SeasonGamesTopLevelDictionary], NetworkError>) -> Void) {
+    func fetchGamesList(completion: @escaping (Result<[GamesListDictionary], NetworkError>) -> Void) {
         guard let baseURL   = URL(string: Constants.SportsAPI.baseURL) else { completion(.failure(.invalidURL)) ; return }
         var urlComponents   = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         
@@ -32,7 +32,7 @@ struct SeasonGamesListDataService {
             switch result {
             case .success(let data):
                 do {
-                    let topLevel = try JSONDecoder().decode([SeasonGamesTopLevelDictionary].self, from: data)
+                    let topLevel = try JSONDecoder().decode([GamesListDictionary].self, from: data)
                     completion(.success(topLevel))
                 } catch {
                     completion(.failure(.unableToDecode))

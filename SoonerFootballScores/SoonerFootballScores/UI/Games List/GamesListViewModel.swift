@@ -1,5 +1,5 @@
 //
-//  SeasonGamesListViewModel.swift
+//  GamesListViewModel.swift
 //  SoonerFootballScores
 //
 //  Created by iMac Pro on 3/7/23.
@@ -7,18 +7,18 @@
 
 import Foundation
 
-protocol SeasonGamesListViewDelegate: AnyObject {
+protocol GamesListViewDelegate: AnyObject {
     func gamesLoadedSuccessfully()
     func encountered(_ error: NetworkError)
 }
 
-class SeasonGamesListViewModel {
-    weak var delegate: SeasonGamesListViewDelegate?
-    var games: [SeasonGamesTopLevelDictionary] = []
-    private let service: SeasonGamesListDataService
+class GamesListViewModel {
+    weak var delegate: GamesListViewDelegate?
+    var games: [GamesListDictionary] = []
+    private let service: GamesListDataService
     
     // Dependency Injection
-    init(delegate: SeasonGamesListViewDelegate?, service: SeasonGamesListDataService = SeasonGamesListDataService()) {
+    init(delegate: GamesListViewDelegate?, service: GamesListDataService = GamesListDataService()) {
         self.delegate = delegate
         self.service = service
         self.fetchGamesList()

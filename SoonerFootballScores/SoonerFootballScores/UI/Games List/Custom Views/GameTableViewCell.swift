@@ -1,5 +1,5 @@
 //
-//  SeasonGameTableViewCell.swift
+//  GameTableViewCell.swift
 //  SoonerFootballScores
 //
 //  Created by iMac Pro on 3/7/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SeasonGameTableViewCell: UITableViewCell {
+class GameTableViewCell: UITableViewCell {
 
     //MARK: - OUTLETS
     @IBOutlet weak var awayTeamNameLabel: UILabel!
@@ -18,7 +18,7 @@ class SeasonGameTableViewCell: UITableViewCell {
     
     
     //MARK: - FUNCTIONS
-    func configureUI(forGame game: SeasonGamesTopLevelDictionary) {
+    func configureUI(forGame game: GamesListDictionary) {
         awayTeamNameLabel.text = game.awayTeamName
         awayTeamScoreLabel.text = "\(game.awayTeamFinalScore)"
         homeTeamNameLabel.text = game.homeTeamName
