@@ -96,6 +96,10 @@
                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="BEr-8u-f0T" firstAttribute="leading" secondItem="ud5-XL-KDe" secondAttribute="trailing" constant="8" id="GfS-tx-5Qh"/>
+                                                        <constraint firstItem="CV9-sa-D11" firstAttribute="leading" secondItem="BEr-8u-f0T" secondAttribute="trailing" constant="7.9999999999999432" id="dFq-Zd-XOF"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>

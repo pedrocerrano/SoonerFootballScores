@@ -19,4 +19,8 @@ struct Constants {
         
         static let tokenString      = "H4HP4tVe/PUHXs2rphw9z0upZACS5z2d0IjnDadVdnSiFJY6VTgF81ffkT2FysV3"
     }
+    
+    struct Error {
+        static let unknownError     = "Unknown error. Our team is working to resolve the issue."
+    }
 }
