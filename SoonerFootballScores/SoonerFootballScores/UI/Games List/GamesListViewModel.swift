@@ -9,7 +9,6 @@ import Foundation
 
 protocol GamesListViewDelegate: AnyObject {
     func gamesLoadedSuccessfully()
-    func encountered(_ error: NetworkError)
 }
 
 class GamesListViewModel {
@@ -31,7 +30,7 @@ class GamesListViewModel {
                 self.games = topLevel
                 self.delegate?.gamesLoadedSuccessfully()
             case .failure(let error):
-                self.delegate?.encountered(error)
+                print(error.errorDescription ?? "Write better code.")
             }
         }
     }

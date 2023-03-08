@@ -21,8 +21,8 @@
 		29CD821129B7D579006BEFA0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821029B7D579006BEFA0 /* APIService.swift */; };
 		29CD821329B7D649006BEFA0 /* GamesListDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821229B7D649006BEFA0 /* GamesListDataService.swift */; };
 		29CD821529B7E94E006BEFA0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821429B7E94E006BEFA0 /* Team.swift */; };
-		29CD821829B7EBDB006BEFA0 /* TeamsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821729B7EBDB006BEFA0 /* TeamsListViewModel.swift */; };
-		29CD821A29B7EC50006BEFA0 /* TeamsInfoDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD821929B7EC50006BEFA0 /* TeamsInfoDataService.swift */; };
+		29F0731229B947150001786D /* GameTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F0731129B947150001786D /* GameTableViewCellViewModel.swift */; };
+		29F0731429B947600001786D /* GameTableViewCellDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F0731329B947600001786D /* GameTableViewCellDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +42,8 @@
 		29CD821029B7D579006BEFA0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		29CD821229B7D649006BEFA0 /* GamesListDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListDataService.swift; sourceTree = "<group>"; };
 		29CD821429B7E94E006BEFA0 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		29CD821729B7EBDB006BEFA0 /* TeamsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewModel.swift; sourceTree = "<group>"; };
-		29CD821929B7EC50006BEFA0 /* TeamsInfoDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsInfoDataService.swift; sourceTree = "<group>"; };
+		29F0731129B947150001786D /* GameTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		29F0731329B947600001786D /* GameTableViewCellDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCellDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,6 @@
 		297C814529B7A0E90006AF98 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				29CD821629B7EBC0006BEFA0 /* Teams Info */,
 				297C814729B7A58C0006AF98 /* Games List */,
 			);
 			path = UI;
@@ -129,6 +128,8 @@
 		297C814A29B7A77F0006AF98 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				29F0731329B947600001786D /* GameTableViewCellDataService.swift */,
+				29F0731129B947150001786D /* GameTableViewCellViewModel.swift */,
 				297C814B29B7A7BB0006AF98 /* GameTableViewCell.swift */,
 			);
 			path = "Custom Views";
@@ -158,15 +159,6 @@
 				297C815629B7ADB30006AF98 /* Constants.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		29CD821629B7EBC0006BEFA0 /* Teams Info */ = {
-			isa = PBXGroup;
-			children = (
-				29CD821929B7EC50006BEFA0 /* TeamsInfoDataService.swift */,
-				29CD821729B7EBDB006BEFA0 /* TeamsListViewModel.swift */,
-			);
-			path = "Teams Info";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,12 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F0731429B947600001786D /* GameTableViewCellDataService.swift in Sources */,
 				297C813029B79F6D0006AF98 /* AppDelegate.swift in Sources */,
-				29CD821829B7EBDB006BEFA0 /* TeamsListViewModel.swift in Sources */,
 				297C815429B7AD610006AF98 /* NetworkError.swift in Sources */,
-				29CD821A29B7EC50006BEFA0 /* TeamsInfoDataService.swift in Sources */,
 				297C814F29B7A9700006AF98 /* Games.swift in Sources */,
 				297C814929B7A5BF0006AF98 /* GamesListVC.swift in Sources */,
+				29F0731229B947150001786D /* GameTableViewCellViewModel.swift in Sources */,
 				29CD821329B7D649006BEFA0 /* GamesListDataService.swift in Sources */,
 				297C815129B7AC430006AF98 /* GamesListViewModel.swift in Sources */,
 				297C814C29B7A7BB0006AF98 /* GameTableViewCell.swift in Sources */,

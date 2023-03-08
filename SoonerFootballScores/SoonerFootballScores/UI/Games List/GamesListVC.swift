@@ -13,16 +13,16 @@ class GamesListVC: UIViewController {
     @IBOutlet weak var seasonGameListTableView: UITableView!
     
     
+    //MARK: - PROPERTIES
+    var gamesViewModel: GamesListViewModel!
+    
+    
     //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         seasonGameListTableView.dataSource = self
         gamesViewModel = GamesListViewModel(delegate: self)
     }
-    
-    
-    //MARK: - PROPERTIES
-    var gamesViewModel: GamesListViewModel!
 
 
     // MARK: - Navigation
@@ -57,15 +57,6 @@ extension GamesListVC: GamesListViewDelegate {
     func gamesLoadedSuccessfully() {
         DispatchQueue.main.async {
             self.seasonGameListTableView.reloadData()
-        }
-    }
-    
-    func encountered(_ error: NetworkError) {
-        let alertController = UIAlertController(title: "Network Error", message: error.errorDescription, preferredStyle: .alert)
-        let closeAction     = UIAlertAction(title: "Cancel", style: .cancel)
-        alertController.addAction(closeAction)
-        DispatchQueue.main.async {
-            self.present(alertController, animated: true)
         }
     }
 } //: EXT Games List Delegate

@@ -12,6 +12,7 @@ struct Constants {
     struct SportsAPI {
         
         static let baseURL              = "https://api.collegefootballdata.com/"
+        static let logosBaseURL         = "http://a.espncdn.com/i/teamlogos/ncaa/500/"
         
         struct Headers {
             static let headerOneValue   = "application/json"
@@ -22,7 +23,6 @@ struct Constants {
             static let headerTwoField   = "Authorization"
         }
         
-        
         struct FetchGames {
             static let gamesPath        = "games"
             
@@ -30,11 +30,6 @@ struct Constants {
             static let seasonQueryValue = "2022"
             static let teamQueryKey     = "team"
             static let teamQueryValue   = "Oklahoma"
-        }
-        
-        
-        struct FetchTeams {
-            static let teamsInfoPath    = "teams"
         }
     } //: SportsAPI
     
