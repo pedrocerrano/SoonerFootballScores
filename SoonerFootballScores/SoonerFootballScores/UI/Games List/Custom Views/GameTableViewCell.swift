@@ -10,7 +10,6 @@ import UIKit
 class GameTableViewCell: UITableViewCell {
 
     //MARK: - OUTLETS
-    
     @IBOutlet weak var awayTeamLogoImageView: UIImageView!
     @IBOutlet weak var awayTeamNameLabel: UILabel!
     @IBOutlet weak var awayTeamScoreLabel: UILabel!
@@ -18,17 +17,17 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var homeTeamNameLabel: UILabel!
     @IBOutlet weak var homeTeamScoreLabel: UILabel!
     @IBOutlet weak var winOrLoseLabel: UILabel!
-       
     
     //MARK: - PROPERTIES
     
     
     //MARK: - FUNCTIONS
-    func configureUI(forGame game: GamesListDictionary) {
+    func configureUI(forGame game: GameListDictionary) {
         awayTeamNameLabel.text = game.awayTeamName
         awayTeamScoreLabel.text = "\(game.awayTeamFinalScore)"
         homeTeamNameLabel.text = game.homeTeamName
         homeTeamScoreLabel.text = "\(game.homeTeamFinalScore)"
+
         
         if game.awayTeamName == "Oklahoma" && game.awayTeamFinalScore > game.homeTeamFinalScore {
             formatWiningText()
@@ -37,6 +36,14 @@ class GameTableViewCell: UITableViewCell {
         } else {
             formatLosingText()
         }
+    }
+    
+    private func fetchHomeTeamLogo(forGame game: GameListDictionary) {
+        
+    }
+    
+    private func fetchAwayTeamLogo(forGame game: GameListDictionary) {
+        
     }
     
     

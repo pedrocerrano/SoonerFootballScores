@@ -13,18 +13,18 @@ protocol GamesListViewDelegate: AnyObject {
 
 class GamesListViewModel {
     weak var delegate: GamesListViewDelegate?
-    var games: [GamesListDictionary] = []
-    private let service: GamesListDataService
+    var games: [GameListDictionary] = []
+    private let service: GamesDataService
     
     // Dependency Injection
-    init(delegate: GamesListViewDelegate?, service: GamesListDataService = GamesListDataService()) {
+    init(delegate: GamesListViewDelegate?, service: GamesDataService = GamesDataService()) {
         self.delegate = delegate
         self.service = service
         self.fetchGamesList()
     }
     
     func fetchGamesList() {
-        service.fetchGamesList { result in
+        service.fetchGamesList(with: .season) { result in
             switch result {
             case .success(let topLevel):
                 self.games = topLevel

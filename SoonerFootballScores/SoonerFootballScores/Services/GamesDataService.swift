@@ -1,5 +1,5 @@
 //
-//  GamesListDataService.swift
+//  GamesDataService.swift
 //  SoonerFootballScores
 //
 //  Created by iMac Pro on 3/7/23.
@@ -7,21 +7,12 @@
 
 import Foundation
 
-struct GamesListDataService {
+struct GamesDataService {
     
     private let service = APIService()
     
-    func fetchGamesList(completion: @escaping (Result<[GamesListDictionary], NetworkError>) -> Void) {
-        guard let baseURL   = URL(string: Constants.SportsAPI.baseURL) else { completion(.failure(.invalidURL)) ; return }
-        var urlComponents   = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        urlComponents?.path.append(Constants.SportsAPI.FetchGames.gamesPath)
-        
-        
-        let seasonQuery     = URLQueryItem(name: Constants.SportsAPI.FetchGames.seasonQueryKey, value: Constants.SportsAPI.FetchGames.seasonQueryValue)
-        let teamQuery       = URLQueryItem(name: Constants.SportsAPI.FetchGames.teamQueryKey, value: Constants.SportsAPI.FetchGames.teamQueryValue)
-        urlComponents?.queryItems = [seasonQuery, teamQuery]
-        
-        guard let finalURL  = urlComponents?.url else { completion(.failure(.invalidURL)) ; return }
+    func fetchGamesList(with endpoint: GamesEndpoint, completion: @escaping (Result<[GameListDictionary], NetworkError>) -> Void) {
+        guard let finalURL  = endpoint.fullURL else { completion(.failure(.invalidURL)) ; return }
         print("Fetch Games List Final URL: \(finalURL)")
         
         var request         = URLRequest(url: finalURL)
@@ -34,7 +25,7 @@ struct GamesListDataService {
             switch result {
             case .success(let data):
                 do {
-                    let topLevel = try JSONDecoder().decode([GamesListDictionary].self, from: data)
+                    let topLevel = try JSONDecoder().decode([GameListDictionary].self, from: data)
                     completion(.success(topLevel))
                 } catch {
                     completion(.failure(.unableToDecode))
