@@ -10,16 +10,14 @@ import UIKit
 class GameTableViewCell: UITableViewCell {
 
     //MARK: - OUTLETS
-    @IBOutlet weak var awayTeamLogoImageView: UIImageView!
+    @IBOutlet weak var awayTeamLogoImageView: ServiceRequestingImageView!
     @IBOutlet weak var awayTeamNameLabel: UILabel!
     @IBOutlet weak var awayTeamScoreLabel: UILabel!
-    @IBOutlet weak var homeTeamLogoImageView: UIImageView!
+    @IBOutlet weak var homeTeamLogoImageView: ServiceRequestingImageView!
     @IBOutlet weak var homeTeamNameLabel: UILabel!
     @IBOutlet weak var homeTeamScoreLabel: UILabel!
     @IBOutlet weak var winOrLoseLabel: UILabel!
-    
-    //MARK: - PROPERTIES
-    
+
     
     //MARK: - FUNCTIONS
     func configureUI(forGame game: GameListDictionary) {
@@ -27,7 +25,8 @@ class GameTableViewCell: UITableViewCell {
         awayTeamScoreLabel.text = "\(game.awayTeamFinalScore)"
         homeTeamNameLabel.text = game.homeTeamName
         homeTeamScoreLabel.text = "\(game.homeTeamFinalScore)"
-
+        fetchHomeTeamLogo(forGame: game)
+        fetchAwayTeamLogo(forGame: game)
         
         if game.awayTeamName == "Oklahoma" && game.awayTeamFinalScore > game.homeTeamFinalScore {
             formatWiningText()
@@ -39,11 +38,21 @@ class GameTableViewCell: UITableViewCell {
     }
     
     private func fetchHomeTeamLogo(forGame game: GameListDictionary) {
-        
+        guard let baseLogoURL = URL(string: Constants.SportsAPI.logosBaseURL),
+              var urlComponents = URLComponents(url: baseLogoURL, resolvingAgainstBaseURL: true) else { return}
+        urlComponents.path.append(String(game.homeTeamID))
+        guard let finalLogoURL = urlComponents.url?.appendingPathExtension("png") else { return }
+        homeTeamLogoImageView.fetchImage(using: finalLogoURL)
+        print("Home Team Logo final URL: \(finalLogoURL)")
     }
     
     private func fetchAwayTeamLogo(forGame game: GameListDictionary) {
-        
+        guard let baseLogoURL = URL(string: Constants.SportsAPI.logosBaseURL),
+              var urlComponents = URLComponents(url: baseLogoURL, resolvingAgainstBaseURL: true) else { return}
+        urlComponents.path.append(String(game.awayTeamID))
+        guard let finalLogoURL = urlComponents.url?.appendingPathExtension("png") else { return }
+        awayTeamLogoImageView.fetchImage(using: finalLogoURL)
+        print("Away Team Logo final URL: \(finalLogoURL)")
     }
     
     
