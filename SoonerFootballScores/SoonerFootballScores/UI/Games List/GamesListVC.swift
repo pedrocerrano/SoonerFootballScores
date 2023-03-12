@@ -27,7 +27,11 @@ class GamesListVC: UIViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        guard segue.identifier == "toStatsDetailVC",
+              let index = seasonGameListTableView.indexPathForSelectedRow,
+              let destinationVC = segue.destination as? StatsDetailVC else { return }
+        let game = gamesViewModel.games[index.row]
+        destinationVC.statsViewModel.game = game
     }
 } //: CLASS
 
