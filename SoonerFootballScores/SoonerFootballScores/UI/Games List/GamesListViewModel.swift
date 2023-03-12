@@ -14,23 +14,23 @@ protocol GamesListViewDelegate: AnyObject {
 class GamesListViewModel {
     weak var delegate: GamesListViewDelegate?
     var games: [GameListDictionary] = []
-    private let service: GamesDataService
+    private let gamesService: GamesDataServicable
     
     // Dependency Injection
-    init(delegate: GamesListViewDelegate?, service: GamesDataService = GamesDataService()) {
+    init(delegate: GamesListViewDelegate?, service: GamesDataServicable = GamesDataService()) {
         self.delegate = delegate
-        self.service = service
+        self.gamesService = service
         self.fetchGamesList()
     }
     
     func fetchGamesList() {
-        service.fetchGamesList(with: .season) { result in
+        gamesService.fetchGamesList(with: .season) { result in
             switch result {
             case .success(let topLevel):
                 self.games = topLevel
                 self.delegate?.gamesLoadedSuccessfully()
             case .failure(let error):
-                print(error.errorDescription ?? "Write better code.")
+                print(error.errorDescription ?? Constants.Error.unknownError)
             }
         }
     }

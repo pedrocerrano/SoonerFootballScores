@@ -31,7 +31,9 @@ class GamesListVC: UIViewController {
               let index = seasonGameListTableView.indexPathForSelectedRow,
               let destinationVC = segue.destination as? StatsDetailVC else { return }
         let game = gamesViewModel.games[index.row]
-        destinationVC.statsViewModel.game = game
+        DispatchQueue.main.async {
+            destinationVC.statsViewModel = StatsDetailViewModel(game: game)
+        }
     }
 } //: CLASS
 

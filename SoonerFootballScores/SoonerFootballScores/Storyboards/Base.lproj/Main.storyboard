@@ -162,10 +162,52 @@
                     <view key="view" contentMode="scaleToFill" id="CqY-Oi-RPm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bRc-Uj-1Pf">
+                                <rect key="frame" x="20" y="103" width="353" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="Ogg-rF-8pv" eventType="valueChanged" id="otX-a8-YuG"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCN-PL-Gpr">
+                                <rect key="frame" x="0.0" y="146" width="393" height="672"/>
+                                <connections>
+                                    <segue destination="XQd-Wg-Uyz" kind="embed" id="XOd-kt-sfW"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4se-9c-nFj">
+                                <rect key="frame" x="0.0" y="146" width="393" height="672"/>
+                                <connections>
+                                    <segue destination="3LR-LD-a70" kind="embed" id="QOg-vr-vAE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Jb0-Ha-nwh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lCN-PL-Gpr" firstAttribute="top" secondItem="bRc-Uj-1Pf" secondAttribute="bottom" constant="12" id="0ZL-sB-mj3"/>
+                            <constraint firstItem="lCN-PL-Gpr" firstAttribute="leading" secondItem="Jb0-Ha-nwh" secondAttribute="leading" id="0iX-P0-ZEn"/>
+                            <constraint firstItem="Jb0-Ha-nwh" firstAttribute="bottom" secondItem="lCN-PL-Gpr" secondAttribute="bottom" id="2xL-BW-ZJI"/>
+                            <constraint firstItem="bRc-Uj-1Pf" firstAttribute="leading" secondItem="Jb0-Ha-nwh" secondAttribute="leading" constant="20" id="7wP-Vh-gSa"/>
+                            <constraint firstItem="Jb0-Ha-nwh" firstAttribute="trailing" secondItem="bRc-Uj-1Pf" secondAttribute="trailing" constant="20" id="9iO-Qr-goa"/>
+                            <constraint firstItem="Jb0-Ha-nwh" firstAttribute="bottom" secondItem="4se-9c-nFj" secondAttribute="bottom" id="GTS-nK-N4N"/>
+                            <constraint firstItem="4se-9c-nFj" firstAttribute="top" secondItem="bRc-Uj-1Pf" secondAttribute="bottom" constant="12" id="JsC-rr-obR"/>
+                            <constraint firstItem="bRc-Uj-1Pf" firstAttribute="top" secondItem="Jb0-Ha-nwh" secondAttribute="top" id="SPP-BL-xRQ"/>
+                            <constraint firstItem="Jb0-Ha-nwh" firstAttribute="trailing" secondItem="4se-9c-nFj" secondAttribute="trailing" id="YE5-5f-bjm"/>
+                            <constraint firstItem="4se-9c-nFj" firstAttribute="leading" secondItem="Jb0-Ha-nwh" secondAttribute="leading" id="mam-ig-WNx"/>
+                            <constraint firstItem="Jb0-Ha-nwh" firstAttribute="trailing" secondItem="lCN-PL-Gpr" secondAttribute="trailing" id="r9q-jF-cyd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kzS-7n-Sbc"/>
+                    <connections>
+                        <outlet property="awayTeamContainerView" destination="lCN-PL-Gpr" id="XKa-3Q-RP7"/>
+                        <outlet property="homeTeamContainerView" destination="4se-9c-nFj" id="HrN-OF-Emt"/>
+                        <outlet property="teamsSegmentedControl" destination="bRc-Uj-1Pf" id="Flg-c0-fYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iea-Kl-I47" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,6 +230,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqg-xV-hEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="315" y="18"/>
+        </scene>
+        <!--Away Team StatsVC-->
+        <scene sceneID="iaY-wl-sqT">
+            <objects>
+                <viewController id="XQd-Wg-Uyz" customClass="AwayTeamStatsVC" customModule="SoonerFootballScores" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lxv-Wh-4Ra">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMe-t5-h2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2581" y="-334"/>
+        </scene>
+        <!--Home Team StatsVC-->
+        <scene sceneID="ezV-hr-VFA">
+            <objects>
+                <viewController id="3LR-LD-a70" customClass="HomeTeamStatsVC" customModule="SoonerFootballScores" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Fo-tC-UbX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKv-FB-wjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2581" y="249"/>
         </scene>
     </scenes>
     <resources>

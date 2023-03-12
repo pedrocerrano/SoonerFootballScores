@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct GamesDataService {
-    
+protocol GamesDataServicable {
+    func fetchGamesList(with endpoint: GamesEndpoint, completion: @escaping (Result<[GameListDictionary], NetworkError>) -> Void)
+}
+
+struct GamesDataService: GamesDataServicable {
     private let service = APIService()
     
     func fetchGamesList(with endpoint: GamesEndpoint, completion: @escaping (Result<[GameListDictionary], NetworkError>) -> Void) {
