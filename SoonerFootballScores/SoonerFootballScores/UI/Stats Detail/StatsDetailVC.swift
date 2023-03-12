@@ -39,12 +39,8 @@ class StatsDetailVC: UIViewController {
         configureUI()
         changeViews()
     }
-    
-    
-    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        changeViews()
-    }
-    
+
+    //MARK: - FUNCTIONS
     func configureUI() {
         DispatchQueue.main.async {
             guard let game = self.statsViewModel.game else { return }
@@ -67,6 +63,11 @@ class StatsDetailVC: UIViewController {
         }
     }
     
+    //MARK: - SEGMENTED CONTROL
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        changeViews()
+    }
+
     func changeViews() {
         let selectedIndex = teamsSegmentedControl.selectedSegmentIndex
         switch selectedIndex {
@@ -81,6 +82,7 @@ class StatsDetailVC: UIViewController {
         }
     }
     
+    //MARK: - NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "toAwayTeamStatsVC":
@@ -97,5 +99,5 @@ class StatsDetailVC: UIViewController {
             break
         }
     }
-}
+} //: CLASS
 

@@ -10,81 +10,59 @@ import UIKit
 class HomeTeamStatsVC: UIViewController {
     
     //MARK: - OUTLETS
-    @IBOutlet weak var statHomePassingTDs: UILabel!
-    @IBOutlet weak var statHomeRushingTDs: UILabel!
-    @IBOutlet weak var statHomeFirstDowns: UILabel!
-    @IBOutlet weak var statHomeTotalYards: UILabel!
-    @IBOutlet weak var statHomePassingYards: UILabel!
-    @IBOutlet weak var statHomeRushingYards: UILabel!
-    @IBOutlet weak var statHomePenaltiesYards: UILabel!
-    @IBOutlet weak var statHomeInterceptions: UILabel!
-    @IBOutlet weak var statHomeFumbles: UILabel!
-    @IBOutlet weak var statHomeFumblesRecovered: UILabel!
-    @IBOutlet weak var statHomeTackles: UILabel!
-    @IBOutlet weak var statHomeSacks: UILabel!
-    @IBOutlet weak var statHomeTimeOfPOssession: UILabel!
+    @IBOutlet weak var statHomePassingTDsLabel: UILabel!
+    @IBOutlet weak var statHomeRushingTDsLabel: UILabel!
+    @IBOutlet weak var statHomeFirstDownsLabel: UILabel!
+    @IBOutlet weak var statHomeTotalYardsLabel: UILabel!
+    @IBOutlet weak var statHomePassingYardsLabel: UILabel!
+    @IBOutlet weak var statHomeRushingYardsLabel: UILabel!
+    @IBOutlet weak var statHomePenaltiesYardsLabel: UILabel!
+    @IBOutlet weak var statHomeInterceptionsLabel: UILabel!
+    @IBOutlet weak var statHomeFumblesLabel: UILabel!
+    @IBOutlet weak var statHomeFumblesRecoveredLabel: UILabel!
+    @IBOutlet weak var statHomeTacklesLabel: UILabel!
+    @IBOutlet weak var statHomeSacksLabel: UILabel!
+    @IBOutlet weak var statHomeTimeOfPossessionLabel: UILabel!
 
     //MARK: - PROPERTIES
     var statsViewModel: StatsDetailViewModel!
     
-    
     //MARK: - FUNCTIONS
     func configure(with team: Team) {
         for stat in team.stats {
-            if stat.category == "passingTDs" {
-                
-            }
-            
-            if stat.category == "rushingTDs" {
-                
-            }
-            
-            if stat.category == "firstDowns" {
-                
-            }
-            
-            if stat.category == "totalYards" {
-                
-            }
-            
-            if stat.category == "netPassingYards" {
-                
-            }
-            
-            if stat.category == "rushingYards" {
-                
-            }
-            
-            if stat.category == "totalPenaltiesYards" {
-                
-            }
-            
-            if stat.category == "interceptions" {
-                
-            }
-            
-            if stat.category == "totalFumbles" {
-                
-            }
-            
-            if stat.category == "fumblesRecovered" {
-                
-            }
-            
-            if stat.category == "tackles" {
-                
-            }
-            
-            if stat.category == "sacks" {
-                
-            }
-            
-            if stat.category == "possessionTime" {
-                
+            switch stat.category {
+            case "passingTDs":
+                self.statHomePassingTDsLabel.text = stat.statValue
+            case "rushingTDs":
+                self.statHomeRushingTDsLabel.text = stat.statValue
+            case "firstDowns":
+                self.statHomeFirstDownsLabel.text = stat.statValue
+            case "totalYards":
+                self.statHomeTotalYardsLabel.text = stat.statValue
+            case "netPassingYards":
+                self.statHomePassingYardsLabel.text = stat.statValue
+            case "rushingYards":
+                self.statHomeRushingYardsLabel.text = stat.statValue
+            case "totalPenaltiesYards":
+                self.statHomePenaltiesYardsLabel.text = stat.statValue
+            case "interceptions":
+                self.statHomeInterceptionsLabel.text = stat.statValue
+            case "totalFumbles":
+                self.statHomeFumblesLabel.text = stat.statValue
+            case "fumblesRecovered":
+                self.statHomeFumblesRecoveredLabel.text = stat.statValue
+            case "tackles":
+                self.statHomeTacklesLabel.text = stat.statValue
+            case "sacks":
+                self.statHomeSacksLabel.text = stat.statValue
+            case "possessionTime":
+                self.statHomeTimeOfPossessionLabel.text = stat.statValue
+            default:
+                break
             }
         }
     }
-}
+} //: CLASS
 
 
 //MARK: - EXT: HomeTeamDelegate

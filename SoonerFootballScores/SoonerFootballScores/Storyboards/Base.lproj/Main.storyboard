@@ -23,14 +23,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7S-hE-g2I">
-                                <rect key="frame" x="176.66666666666666" y="139" width="40" height="20.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022 Season" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7S-hE-g2I">
+                                <rect key="frame" x="146.33333333333334" y="135" width="100.33333333333334" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-Fn-GEN">
-                                <rect key="frame" x="0.0" y="179.33333333333331" width="393" height="672.66666666666674"/>
+                                <rect key="frame" x="0.0" y="167.33333333333331" width="393" height="684.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="bOE-LF-fL3" customClass="GameTableViewCell" customModule="SoonerFootballScores" customModuleProvider="target">
@@ -148,10 +148,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2wc-Fn-GEN" firstAttribute="top" secondItem="R7S-hE-g2I" secondAttribute="bottom" constant="20" id="CcW-VL-beO"/>
+                            <constraint firstItem="2wc-Fn-GEN" firstAttribute="top" secondItem="R7S-hE-g2I" secondAttribute="bottom" constant="12" id="CcW-VL-beO"/>
                             <constraint firstItem="R7S-hE-g2I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EnX-mF-g2N"/>
                             <constraint firstItem="2wc-Fn-GEN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fn2-d1-aaj"/>
-                            <constraint firstItem="R7S-hE-g2I" firstAttribute="top" secondItem="4wH-eO-pJ4" secondAttribute="bottom" constant="12" id="TcQ-MQ-1cW"/>
+                            <constraint firstItem="R7S-hE-g2I" firstAttribute="top" secondItem="4wH-eO-pJ4" secondAttribute="bottom" constant="8" id="TcQ-MQ-1cW"/>
                             <constraint firstAttribute="bottom" secondItem="2wc-Fn-GEN" secondAttribute="bottom" id="Xyd-OK-b2L"/>
                             <constraint firstAttribute="trailing" secondItem="2wc-Fn-GEN" secondAttribute="trailing" id="pLL-Ks-e6M"/>
                             <constraint firstItem="4wH-eO-pJ4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vTV-tS-pCd"/>
@@ -643,19 +643,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="statAwayFirstDowns" destination="7NO-Gc-ygL" id="EFr-E0-FLX"/>
-                        <outlet property="statAwayFumbles" destination="V7t-lz-gTz" id="hFo-rl-nz6"/>
-                        <outlet property="statAwayFumblesRecovered" destination="5bc-Kr-9nJ" id="uFa-91-JxB"/>
-                        <outlet property="statAwayInterceptions" destination="q90-hK-MAD" id="xpl-XV-Y60"/>
-                        <outlet property="statAwayPassingTDLabel" destination="mVK-GA-PwA" id="UEh-SH-nHA"/>
-                        <outlet property="statAwayPassingYards" destination="eHV-WM-ERf" id="C45-zt-eCo"/>
-                        <outlet property="statAwayPeanaltiesYards" destination="LKp-h5-5h3" id="sb8-wd-xw6"/>
-                        <outlet property="statAwayRushingTDLabel" destination="kUL-ag-Nex" id="sRl-10-Coq"/>
-                        <outlet property="statAwayRushingYards" destination="Usv-yq-YcI" id="bQj-B7-VK5"/>
-                        <outlet property="statAwaySacks" destination="oCm-gJ-LDK" id="uaN-bB-Er6"/>
-                        <outlet property="statAwayTackles" destination="wba-KK-3jV" id="5F7-SX-0nT"/>
-                        <outlet property="statAwayTimeOfPossession" destination="cg0-gY-6xo" id="tta-MU-5eO"/>
-                        <outlet property="statAwayTotalYards" destination="dy9-fq-UVT" id="jee-sS-SZx"/>
+                        <outlet property="statAwayFirstDownsLabel" destination="7NO-Gc-ygL" id="EFr-E0-FLX"/>
+                        <outlet property="statAwayFumblesLabel" destination="V7t-lz-gTz" id="hFo-rl-nz6"/>
+                        <outlet property="statAwayFumblesRecoveredLabel" destination="5bc-Kr-9nJ" id="uFa-91-JxB"/>
+                        <outlet property="statAwayInterceptionsLabel" destination="q90-hK-MAD" id="xpl-XV-Y60"/>
+                        <outlet property="statAwayPassingTDsLabel" destination="mVK-GA-PwA" id="UEh-SH-nHA"/>
+                        <outlet property="statAwayPassingYardsLabel" destination="eHV-WM-ERf" id="C45-zt-eCo"/>
+                        <outlet property="statAwayPenaltiesYardsLabel" destination="LKp-h5-5h3" id="sb8-wd-xw6"/>
+                        <outlet property="statAwayRushingTDsLabel" destination="kUL-ag-Nex" id="sRl-10-Coq"/>
+                        <outlet property="statAwayRushingYardsLabel" destination="Usv-yq-YcI" id="bQj-B7-VK5"/>
+                        <outlet property="statAwaySacksLabel" destination="oCm-gJ-LDK" id="uaN-bB-Er6"/>
+                        <outlet property="statAwayTacklesLabel" destination="wba-KK-3jV" id="5F7-SX-0nT"/>
+                        <outlet property="statAwayTimeOfPossessionLabel" destination="cg0-gY-6xo" id="tta-MU-5eO"/>
+                        <outlet property="statAwayTotalYardsLabel" destination="dy9-fq-UVT" id="jee-sS-SZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMe-t5-h2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -906,19 +906,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="statHomeFirstDowns" destination="8M6-Nh-Vcx" id="d74-ib-Det"/>
-                        <outlet property="statHomeFumbles" destination="fu9-Qy-dSG" id="uBU-bI-Ri5"/>
-                        <outlet property="statHomeFumblesRecovered" destination="2LE-g0-AWx" id="HWs-KP-SKt"/>
-                        <outlet property="statHomeInterceptions" destination="8wz-0r-oZv" id="8s7-z3-CRu"/>
-                        <outlet property="statHomePassingTDs" destination="PSe-WD-esg" id="psk-F2-qaO"/>
-                        <outlet property="statHomePassingYards" destination="eIq-Ic-xTE" id="aO3-bn-yAT"/>
-                        <outlet property="statHomePenaltiesYards" destination="PiF-Ie-VYY" id="OcA-JP-chY"/>
-                        <outlet property="statHomeRushingTDs" destination="vzi-o2-gXp" id="j1r-SZ-TRr"/>
-                        <outlet property="statHomeRushingYards" destination="aM1-9D-FkJ" id="oKu-4C-HPl"/>
-                        <outlet property="statHomeSacks" destination="uPW-Fz-oyR" id="g7R-Fz-HFp"/>
-                        <outlet property="statHomeTackles" destination="5CQ-nS-Mf5" id="w9b-Wg-Ie5"/>
-                        <outlet property="statHomeTimeOfPOssession" destination="syx-H1-1i2" id="JGl-uW-YHl"/>
-                        <outlet property="statHomeTotalYards" destination="dEz-z8-1hC" id="43m-6E-lFT"/>
+                        <outlet property="statHomeFirstDownsLabel" destination="8M6-Nh-Vcx" id="d74-ib-Det"/>
+                        <outlet property="statHomeFumblesLabel" destination="fu9-Qy-dSG" id="uBU-bI-Ri5"/>
+                        <outlet property="statHomeFumblesRecoveredLabel" destination="2LE-g0-AWx" id="HWs-KP-SKt"/>
+                        <outlet property="statHomeInterceptionsLabel" destination="8wz-0r-oZv" id="8s7-z3-CRu"/>
+                        <outlet property="statHomePassingTDsLabel" destination="PSe-WD-esg" id="K7h-ux-Fhm"/>
+                        <outlet property="statHomePassingYardsLabel" destination="eIq-Ic-xTE" id="aO3-bn-yAT"/>
+                        <outlet property="statHomePenaltiesYardsLabel" destination="PiF-Ie-VYY" id="OcA-JP-chY"/>
+                        <outlet property="statHomeRushingTDsLabel" destination="vzi-o2-gXp" id="j1r-SZ-TRr"/>
+                        <outlet property="statHomeRushingYardsLabel" destination="aM1-9D-FkJ" id="oKu-4C-HPl"/>
+                        <outlet property="statHomeSacksLabel" destination="uPW-Fz-oyR" id="g7R-Fz-HFp"/>
+                        <outlet property="statHomeTacklesLabel" destination="5CQ-nS-Mf5" id="w9b-Wg-Ie5"/>
+                        <outlet property="statHomeTimeOfPossessionLabel" destination="syx-H1-1i2" id="JGl-uW-YHl"/>
+                        <outlet property="statHomeTotalYardsLabel" destination="dEz-z8-1hC" id="43m-6E-lFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKv-FB-wjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
