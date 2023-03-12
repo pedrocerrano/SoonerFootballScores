@@ -30,7 +30,6 @@ class StatsDetailVC: UIViewController {
     @IBOutlet weak var awayTeamContainerView: UIView!
     @IBOutlet weak var homeTeamContainerView: UIView!
     
-    
     //MARK: - PROPERTIES
     var statsViewModel: StatsDetailViewModel!
     
@@ -68,7 +67,6 @@ class StatsDetailVC: UIViewController {
         }
     }
     
-    
     func changeViews() {
         let selectedIndex = teamsSegmentedControl.selectedSegmentIndex
         switch selectedIndex {
@@ -82,4 +80,22 @@ class StatsDetailVC: UIViewController {
             break
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "toAwayTeamStatsVC":
+            if let destinationVC = segue.destination as? AwayTeamStatsVC {
+                destinationVC.statsViewModel = self.statsViewModel
+                destinationVC.statsViewModel.awayTeamDelegate = destinationVC
+            }
+        case "toHomeTeamStatsVC":
+            if let destinationVC = segue.destination as? HomeTeamStatsVC {
+                destinationVC.statsViewModel = self.statsViewModel
+                destinationVC.statsViewModel.homeTeamDelegate = destinationVC
+            }
+        default:
+            break
+        }
+    }
 }
+

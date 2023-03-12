@@ -10,7 +10,7 @@ import Foundation
 struct GameListDictionary: Decodable {
     private enum CodingKeys: String, CodingKey {
         case gameID             = "id"
-        case season
+        case venue
         case homeTeamID         = "home_id"
         case homeTeamName       = "home_team"
         case homeTeamFinalScore = "home_points"
@@ -22,7 +22,7 @@ struct GameListDictionary: Decodable {
     }
     
     let gameID: Int
-    let season: Int
+    let venue: String
     let homeTeamID: Int
     let homeTeamName: String
     let homeTeamFinalScore: Int

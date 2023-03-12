@@ -7,17 +7,17 @@
 
 import Foundation
 
-protocol GamesListViewDelegate: AnyObject {
+protocol GamesListViewModelDelegate: AnyObject {
     func gamesLoadedSuccessfully()
 }
 
 class GamesListViewModel {
-    weak var delegate: GamesListViewDelegate?
+    weak var delegate: GamesListViewModelDelegate?
     var games: [GameListDictionary] = []
     private let gamesService: GamesDataServicable
     
     // Dependency Injection
-    init(delegate: GamesListViewDelegate?, service: GamesDataServicable = GamesDataService()) {
+    init(delegate: GamesListViewModelDelegate?, service: GamesDataServicable = GamesDataService()) {
         self.delegate = delegate
         self.gamesService = service
         self.fetchGamesList()

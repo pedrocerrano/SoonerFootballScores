@@ -31,9 +31,7 @@ class GamesListVC: UIViewController {
               let index = seasonGameListTableView.indexPathForSelectedRow,
               let destinationVC = segue.destination as? StatsDetailVC else { return }
         let game = gamesViewModel.games[index.row]
-        DispatchQueue.main.async {
-            destinationVC.statsViewModel = StatsDetailViewModel(game: game)
-        }
+        destinationVC.statsViewModel = StatsDetailViewModel(game: game)
     }
 } //: CLASS
 
@@ -59,7 +57,7 @@ extension GamesListVC: UITableViewDataSource {
 
 
 //MARK: - EXT: Games List Delegate
-extension GamesListVC: GamesListViewDelegate {
+extension GamesListVC: GamesListViewModelDelegate {
     func gamesLoadedSuccessfully() {
         DispatchQueue.main.async {
             self.seasonGameListTableView.reloadData()

@@ -34,89 +34,100 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="bOE-LF-fL3" customClass="GameTableViewCell" customModule="SoonerFootballScores" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="96.333335876464844"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bOE-LF-fL3" id="oj2-xT-hGk">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="96.333335876464844"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100.33333587646484"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WY0-xT-C06">
-                                                    <rect key="frame" x="20" y="19.000000000000004" width="353" height="58.333333333333343"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Xo-Sl-GmE">
+                                                    <rect key="frame" x="20" y="11" width="353" height="78.333333333333329"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ud5-XL-KDe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="258" height="58.333333333333336"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WY0-xT-C06">
+                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tij-mT-NHX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="25.333333333333332"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ud5-XL-KDe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="58"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acn-l0-jNU" customClass="LogoServiceForImageView" customModule="SoonerFootballScores" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="25.333333333333332"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="25" id="Ubi-Ky-WgL"/>
-                                                                                <constraint firstAttribute="width" secondItem="acn-l0-jNU" secondAttribute="height" multiplier="1:1" id="Zi6-yJ-cVC"/>
-                                                                            </constraints>
-                                                                        </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(away team)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-av-UWo">
-                                                                            <rect key="frame" x="33.333333333333336" y="0.0" width="119.33333333333331" height="25.333333333333332"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(away score)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrN-D8-mxT">
-                                                                            <rect key="frame" x="160.66666666666666" y="0.0" width="97.333333333333343" height="25.333333333333332"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tij-mT-NHX">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="258" height="25"/>
+                                                                            <subviews>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acn-l0-jNU" customClass="LogoServiceForImageView" customModule="SoonerFootballScores" customModuleProvider="target">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="25" id="Ubi-Ky-WgL"/>
+                                                                                        <constraint firstAttribute="width" secondItem="acn-l0-jNU" secondAttribute="height" multiplier="1:1" id="Zi6-yJ-cVC"/>
+                                                                                    </constraints>
+                                                                                </imageView>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(away team)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-av-UWo">
+                                                                                    <rect key="frame" x="33.000000000000007" y="0.0" width="119.66666666666669" height="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(away score)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrN-D8-mxT">
+                                                                                    <rect key="frame" x="160.66666666666666" y="0.0" width="97.333333333333343" height="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-8y-MBI">
+                                                                            <rect key="frame" x="0.0" y="33" width="258" height="25"/>
+                                                                            <subviews>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yhq-9z-Bk5" customClass="LogoServiceForImageView" customModule="SoonerFootballScores" customModuleProvider="target">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" secondItem="Yhq-9z-Bk5" secondAttribute="height" multiplier="1:1" id="olm-Fh-7qj"/>
+                                                                                        <constraint firstAttribute="height" constant="25" id="swP-Oj-aAN"/>
+                                                                                    </constraints>
+                                                                                </imageView>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(home team)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OT-JM-Zpb">
+                                                                                    <rect key="frame" x="32.999999999999993" y="0.0" width="115.33333333333331" height="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(home score)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPB-A9-w5b">
+                                                                                    <rect key="frame" x="156.33333333333334" y="0.0" width="101.66666666666666" height="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-8y-MBI">
-                                                                    <rect key="frame" x="0.0" y="33.333333333333336" width="258" height="25"/>
-                                                                    <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yhq-9z-Bk5" customClass="LogoServiceForImageView" customModule="SoonerFootballScores" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="25"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" secondItem="Yhq-9z-Bk5" secondAttribute="height" multiplier="1:1" id="olm-Fh-7qj"/>
-                                                                                <constraint firstAttribute="height" constant="25" id="swP-Oj-aAN"/>
-                                                                            </constraints>
-                                                                        </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(home team)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OT-JM-Zpb">
-                                                                            <rect key="frame" x="33.333333333333343" y="0.0" width="115" height="25"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(home score)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPB-A9-w5b">
-                                                                            <rect key="frame" x="156.33333333333334" y="0.0" width="101.66666666666666" height="25"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(W)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEr-8u-f0T">
+                                                                    <rect key="frame" x="283" y="0.0" width="32.333333333333314" height="58"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="AR2-8W-eMf"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CV9-sa-D11">
+                                                                    <rect key="frame" x="340.33333333333331" y="2" width="12.666666666666686" height="54.333333333333329"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(W)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEr-8u-f0T">
-                                                            <rect key="frame" x="283" y="0.0" width="32.333333333333314" height="58.333333333333336"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="AR2-8W-eMf"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(venue)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zn-UH-moB">
+                                                            <rect key="frame" x="0.0" y="66" width="353" height="12.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CV9-sa-D11">
-                                                            <rect key="frame" x="340.33333333333331" y="2" width="12.666666666666686" height="54.666666666666664"/>
-                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="WY0-xT-C06" firstAttribute="leading" secondItem="oj2-xT-hGk" secondAttribute="leadingMargin" id="2wT-Qf-5Wy"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="WY0-xT-C06" secondAttribute="bottom" constant="8" id="ecl-zk-qu3"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="WY0-xT-C06" secondAttribute="trailing" id="enS-pk-m8s"/>
-                                                <constraint firstItem="WY0-xT-C06" firstAttribute="top" secondItem="oj2-xT-hGk" secondAttribute="topMargin" constant="8" id="s8B-dT-9mo"/>
+                                                <constraint firstItem="8Xo-Sl-GmE" firstAttribute="top" secondItem="oj2-xT-hGk" secondAttribute="topMargin" id="6wf-k9-WIt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8Xo-Sl-GmE" secondAttribute="trailing" id="YMT-b0-pjr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8Xo-Sl-GmE" secondAttribute="bottom" id="gjB-yb-3GQ"/>
+                                                <constraint firstItem="8Xo-Sl-GmE" firstAttribute="leading" secondItem="oj2-xT-hGk" secondAttribute="leadingMargin" id="uph-tH-ryR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -126,6 +137,7 @@
                                             <outlet property="homeTeamLogoImageView" destination="Yhq-9z-Bk5" id="Gsa-i1-9kB"/>
                                             <outlet property="homeTeamNameLabel" destination="2OT-JM-Zpb" id="a4f-jg-AI8"/>
                                             <outlet property="homeTeamScoreLabel" destination="fPB-A9-w5b" id="jZH-OZ-CRb"/>
+                                            <outlet property="venueNameLabel" destination="7Zn-UH-moB" id="Kdh-5Q-kya"/>
                                             <outlet property="winOrLoseLabel" destination="BEr-8u-f0T" id="ySn-sP-fI4"/>
                                             <segue destination="Ogg-rF-8pv" kind="show" identifier="toStatsDetailVC" id="X3R-PM-Ac4"/>
                                         </connections>
@@ -166,13 +178,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCN-PL-Gpr">
                                 <rect key="frame" x="0.0" y="248" width="393" height="570"/>
                                 <connections>
-                                    <segue destination="XQd-Wg-Uyz" kind="embed" id="XOd-kt-sfW"/>
+                                    <segue destination="XQd-Wg-Uyz" kind="embed" identifier="toAwayTeamStatsVC" id="XOd-kt-sfW"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4se-9c-nFj">
                                 <rect key="frame" x="0.0" y="248" width="393" height="570"/>
                                 <connections>
-                                    <segue destination="3LR-LD-a70" kind="embed" id="QOg-vr-vAE"/>
+                                    <segue destination="3LR-LD-a70" kind="embed" identifier="toHomeTeamStatsVC" id="QOg-vr-vAE"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bRc-Uj-1Pf">
@@ -630,10 +642,25 @@
                             <constraint firstItem="mPR-FF-CgD" firstAttribute="leading" secondItem="lxv-Wh-4Ra" secondAttribute="leadingMargin" constant="40" id="tjN-Te-QIp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="statAwayFirstDowns" destination="7NO-Gc-ygL" id="EFr-E0-FLX"/>
+                        <outlet property="statAwayFumbles" destination="V7t-lz-gTz" id="hFo-rl-nz6"/>
+                        <outlet property="statAwayFumblesRecovered" destination="5bc-Kr-9nJ" id="uFa-91-JxB"/>
+                        <outlet property="statAwayInterceptions" destination="q90-hK-MAD" id="xpl-XV-Y60"/>
+                        <outlet property="statAwayPassingTDLabel" destination="mVK-GA-PwA" id="UEh-SH-nHA"/>
+                        <outlet property="statAwayPassingYards" destination="eHV-WM-ERf" id="C45-zt-eCo"/>
+                        <outlet property="statAwayPeanaltiesYards" destination="LKp-h5-5h3" id="sb8-wd-xw6"/>
+                        <outlet property="statAwayRushingTDLabel" destination="kUL-ag-Nex" id="sRl-10-Coq"/>
+                        <outlet property="statAwayRushingYards" destination="Usv-yq-YcI" id="bQj-B7-VK5"/>
+                        <outlet property="statAwaySacks" destination="oCm-gJ-LDK" id="uaN-bB-Er6"/>
+                        <outlet property="statAwayTackles" destination="wba-KK-3jV" id="5F7-SX-0nT"/>
+                        <outlet property="statAwayTimeOfPossession" destination="cg0-gY-6xo" id="tta-MU-5eO"/>
+                        <outlet property="statAwayTotalYards" destination="dy9-fq-UVT" id="jee-sS-SZx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMe-t5-h2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2581" y="-334"/>
+            <point key="canvasLocation" x="2581" y="-242"/>
         </scene>
         <!--Home Team StatsVC-->
         <scene sceneID="ezV-hr-VFA">
@@ -878,6 +905,21 @@
                             <constraint firstAttribute="bottomMargin" secondItem="Gag-gJ-XVg" secondAttribute="bottom" constant="12" id="sZL-PM-0vN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="statHomeFirstDowns" destination="8M6-Nh-Vcx" id="d74-ib-Det"/>
+                        <outlet property="statHomeFumbles" destination="fu9-Qy-dSG" id="uBU-bI-Ri5"/>
+                        <outlet property="statHomeFumblesRecovered" destination="2LE-g0-AWx" id="HWs-KP-SKt"/>
+                        <outlet property="statHomeInterceptions" destination="8wz-0r-oZv" id="8s7-z3-CRu"/>
+                        <outlet property="statHomePassingTDs" destination="PSe-WD-esg" id="psk-F2-qaO"/>
+                        <outlet property="statHomePassingYards" destination="eIq-Ic-xTE" id="aO3-bn-yAT"/>
+                        <outlet property="statHomePenaltiesYards" destination="PiF-Ie-VYY" id="OcA-JP-chY"/>
+                        <outlet property="statHomeRushingTDs" destination="vzi-o2-gXp" id="j1r-SZ-TRr"/>
+                        <outlet property="statHomeRushingYards" destination="aM1-9D-FkJ" id="oKu-4C-HPl"/>
+                        <outlet property="statHomeSacks" destination="uPW-Fz-oyR" id="g7R-Fz-HFp"/>
+                        <outlet property="statHomeTackles" destination="5CQ-nS-Mf5" id="w9b-Wg-Ie5"/>
+                        <outlet property="statHomeTimeOfPOssession" destination="syx-H1-1i2" id="JGl-uW-YHl"/>
+                        <outlet property="statHomeTotalYards" destination="dEz-z8-1hC" id="43m-6E-lFT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKv-FB-wjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -886,6 +928,9 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

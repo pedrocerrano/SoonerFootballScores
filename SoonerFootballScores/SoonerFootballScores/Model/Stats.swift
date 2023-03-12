@@ -14,12 +14,21 @@ struct StatsTopLevelDictionary: Decodable {
 
 struct Team: Decodable {
     let school: String
-    let homeAway: String
-    let points: Int
-    let stats: [Stat]
+    let homeAway: HomeAway
+    let stats: [StatCategories]
 }
 
-struct Stat: Decodable {
+struct StatCategories: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case category
+        case statValue = "stat"
+    }
+    
     let category: String
-    let stat: String
+    let statValue: String
+}
+
+enum HomeAway: String, Decodable {
+    case home = "home"
+    case away = "away"
 }

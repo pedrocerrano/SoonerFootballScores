@@ -22,7 +22,7 @@ struct GamesDataService: GamesDataServicable {
         request.httpMethod  = "GET"
         request.addValue(Constants.SportsAPI.Headers.headerOneValue, forHTTPHeaderField: Constants.SportsAPI.Headers.headerOneField)
         request.addValue(Constants.SportsAPI.Headers.headerTwoValue, forHTTPHeaderField: Constants.SportsAPI.Headers.headerTwoField)
-        print("URL Request with Bearer Token: \(request)")
+//        print("URL Request with Bearer Token: \(request.allHTTPHeaderFields)")
         
         service.perform(request) { result in
             switch result {

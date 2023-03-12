@@ -16,6 +16,7 @@ class LogoServiceForImageView: UIImageView {
               var urlComponents = URLComponents(url: baseLogoURL, resolvingAgainstBaseURL: true) else { return}
         urlComponents.path.append(String(game))
         guard let finalLogoURL = urlComponents.url?.appendingPathExtension("png") else { return }
+        print("Final Logo URL: \(finalLogoURL)")
         
         let request = URLRequest(url: finalLogoURL)
         service.perform(request) { result in

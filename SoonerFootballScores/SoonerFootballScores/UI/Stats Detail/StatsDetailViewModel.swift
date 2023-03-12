@@ -7,9 +7,16 @@
 
 import Foundation
 
+protocol StatsDetailViewModelDelegate: AnyObject {
+    func statsLoadedSuccessfully()
+}
+
 class StatsDetailViewModel {
+    weak var awayTeamDelegate: StatsDetailViewModelDelegate?
+    weak var homeTeamDelegate: StatsDetailViewModelDelegate?
     var game: GameListDictionary?
-    var teamStats: [StatsTopLevelDictionary] = []
+    var homeTeam: Team?
+    var awayTeam: Team?
     private let statsService: StatsDetailDataServicable
     
     init(game: GameListDictionary, statsService: StatsDetailDataServicable = StatsDetailDataService()) {
@@ -23,7 +30,12 @@ class StatsDetailViewModel {
         statsService.fetchStatsDetail(with: .game(String(game.gameID))) { result in
             switch result {
             case .success(let topLevel):
-                self.teamStats = topLevel
+                self.homeTeam = topLevel.first?.teams.first(where: { $0.homeAway == .home } )
+                self.awayTeam = topLevel.first?.teams.first(where: { $0.homeAway == .away } )
+                DispatchQueue.main.async {
+                    self.awayTeamDelegate?.statsLoadedSuccessfully()
+                    self.homeTeamDelegate?.statsLoadedSuccessfully()
+                }
             case .failure(let error):
                 print(error.errorDescription ?? Constants.Error.unknownError)
             }

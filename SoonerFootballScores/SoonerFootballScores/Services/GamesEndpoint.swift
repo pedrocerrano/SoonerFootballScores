@@ -24,10 +24,11 @@ enum GamesEndpoint {
             let teamQuery   = URLQueryItem(name: "team", value: "Oklahoma")
             urlComponents.queryItems = [seasonQuery, teamQuery]
         case .game(let gameID):
-            urlComponents.path.append("teams")
-            let gameIDQuery   = URLQueryItem(name: "gameid", value: gameID)
+            urlComponents.path.append("/teams")
+            let gameIDQuery   = URLQueryItem(name: "gameId", value: gameID)
             urlComponents.queryItems = [gameIDQuery]
         }
+        
         return urlComponents.url
     }
 }

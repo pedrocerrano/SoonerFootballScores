@@ -151,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				297C814E29B7A9700006AF98 /* Game.swift */,
-				29CD821429B7E94E006BEFA0 /* Logo.swift */,
 				29EB6F8229BB71A200F5ACD6 /* Stats.swift */,
+				29CD821429B7E94E006BEFA0 /* Logo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
