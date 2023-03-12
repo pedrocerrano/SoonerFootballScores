@@ -9,6 +9,13 @@ import UIKit
 
 class AwayTeamStatsVC: UIViewController {
 
+    //MARK: - OUTLETS
+    
+    
+    
+    
+    
+    
     //MARK: - PROPERTIES
     var statsViewModel: StatsDetailViewModel!
     
